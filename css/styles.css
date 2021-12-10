@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+html {
+  width: 100%;
+}
+
+body{
+background-image: url("https://freefrontend.com/assets/img/css-background-patterns/css-pattern-3.png");
+}
+
+.index-conatiner {
+
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 3fr ;
+  grid-template-rows: .3fr 5fr .5fr;
+  grid-template-areas: 
+  "header header header"
+  "section section section"
+  "footer footer footer";
+}
+
+nav {
+  width: 100%;
+}
+
+header {
+  z-index: 3;
+  background-color: whitesmoke;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  grid-area: header;
+}
+
+ul {
+  list-style: none;
+  background-color: whitesmoke;
+  font-size: 0; /* truco por el uso de inline-block*/
+}
+
+li {
+  list-style: none;
+  text-align: center;
+  /* AQUI EL DISPLAY ES LO IMPORTANTE */
+  display: inline-block;
+  /* Yo tenia solo display flex y ocasionaba desboramiento*/
+  width: 25%;
+  font-size: 20em;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: background-color 0.5s;
+  padding: 1vw;
+}
+
+li:hover {
+  background-color: bisque;
+}
+
+a {
+  padding: 1vw 1vw;
+  text-decoration: none;
+  color: rgb(250, 123, 144);
+  font-size: 25px;
+  letter-spacing: 0.4vw;
+  font-weight: bold;
+}
+
+h1 {
+  letter-spacing: 10px;
+}
+
+section {
+  grid-area: section;
+  background-color: whitesmoke;
+  display: block;
+  margin: 100px auto;
+  text-align: center;
+  border-bottom: solid;
+  border-top: solid; 
+  /* border-style: solid; */
+  padding: 60px;
+}
+
+p {
+  margin: 20px;
+}
+
+.icons,
+.logos {
+  text-align: center;
+}
+.bici-logo {
+  margin-bottom: 10px;
+}
+
+footer{
+  grid-area: footer;
+  margin-top: 50px;
+}
+.logos img {
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+.information {
+  font-size: 30px;
+}
+
+
+
+/*SECCIÓN PROYECTS  DESKTOP **********************************************/
+
+
+.proyect-block {
+  display: flex;
+  margin: 0 auto;
+}
+
+.img-box{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  background-color: aliceblue;
+  margin: 20px;
+  align-items: center;
+}
+
+img{
+  max-height: 200px;
+  min-width: 79px;
+}
+
+
+.proyect-info{
+  
+  justify-content: center;
+  width: 50%;
+  background-color: aliceblue;
+  margin: 20px
+
+}
+
+/* SECCIÓN CERTIFICATIONS DESKTOP */
+
+/* Prueba con Grid  */
+.grid-container-certificates{
+  
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: 1fr, 2fr, 2fr, 2fr, 2fr, 1fr;
+  grid-template-areas: 
+  
+  "header header", 
+  "certificaioblock.. certificatiombloc,"
+  o
+  "image-box"..."certificateinfo"
+  
+  
+  ;
+
+
+
+}
+
+
+
+
+/* 
+ESTILOS ANTERIORES con Flexbox
+.certification-block{
+  display: flex;
+  margin: 0 auto;
+}
+
+.certification-info{
+  
+  justify-content: center;
+  width: 50%;
+  background-color: aliceblue;
+  margin: 20px
+}
+h3{
+  margin: 20px;
+}
+ */
+
+/* CONTACT */
+
+.form-section{
+  margin: 0 auto;
+  max-width: 800px;
+  background-color:whitesmoke;
+}
+
+
+fieldset{
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES  */
+@media screen and (max-width: 768px)
+
+/* DE 768pc para abajo */
+{
+  .body{
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-template-rows: .2fr 4fr 1fr;
+  grid-template-areas: 
+  "header header header"
+  "section section section"
+  "footer footer footer"
+  }
+
+  footer{
+    margin-top: 5px;
+  }
+  
+
+  .information {
+    font-size: 20px;
+}
+
+
+/* SECCIÓN PROYECTS DE MEDIA QUERY */
+
+
+
+.proyect-block {
+  margin: 0 auto;
+  display: block; 
+}
+
+.img-box{
+margin: 0 auto;
+}
+
+
+.proyect-info{
+
+  margin: 0 auto;
+  display: block;
+  justify-content: center;
+  background-color: yellow;
+
+}
+
+
+}
+
+
+/* 
+
+Si se quiere modificar un mismo elemento de distintas maneras según cada archivo html, (por ejemplo el body) solo debes de agragar clases al elemento html, (al body)
+y por cada clase añadida, hacer los estilos que queramos. Esto producirá distinots estilos de body en cada una de sus "instancias"
+
+index.html: 
+<body class= "bodyDelIndex">
+hijos
+</body>
+
+proyectos.html: 
+<body class= "bodyDeProyectos">
+hijos
+</body>
+
+y en CSS: 
+
+.bodyDelIndex{
+background-color: black
+}
+
+.bodyDeProyectos{
+background-color: white; 
+}
+
+esto modificará el estilo del body en cada una de sus instancias. 
+
+¿que pasa si están en un mismo archivo html las clases? se sobrreescribe el estilo de la utlima clase declarada en el html. 
+*/
+
+
+/* me quedé en v  */
