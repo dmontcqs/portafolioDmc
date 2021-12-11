@@ -151,29 +151,75 @@ img{
 
 /* SECCIÓN CERTIFICATIONS DESKTOP */
 
+
 /* Prueba con Grid  */
+
 .grid-container-certificates{
   
-  width: 100%;
   display: grid;
-  grid-template-columns: 1fr, 1fr;
-  grid-template-rows: 1fr, 2fr, 2fr, 2fr, 2fr, 1fr;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(1, 4fr) ;
   grid-template-areas: 
-  
-  "header header", 
-  "certificaioblock.. certificatiombloc,"
-  o
-  "image-box"..."certificateinfo"
-  
-  
-  ;
 
-
-
+  "img-box1 certification-info1"
+  "img-box2 certification-info2"
+  "img-box3 certification-info3"
+  "img-box4 certification-info4"
 }
 
 
 
+.img-box1{
+  margin: 0 auto;
+  grid-area: "img-box1";
+}
+
+.certification-info1{
+  margin: 0 auto;
+  grid-area: certification-info1;
+  margin: 15px; 
+}
+
+.img-box2{
+  margin: 0 auto;
+  grid-area: "img-box2";
+}
+
+.certification-info2{
+  margin: 0 auto;
+  grid-area: certification-info2;
+  margin: 15px; 
+}
+
+
+.img-box3{
+  margin: 0 auto;
+  grid-area: "img-box3";
+}
+
+.certification-info3{
+margin: 0 auto;
+grid-area: certification-info3;
+background-color: aquamarine;
+margin: 15px; 
+}
+  
+
+.img-box4{
+  margin: 0 auto;
+  grid-area: "img-box4";
+}
+
+.certification-info4{ 
+margin: 0 auto;
+grid-area: certification-info4; 
+background-color: aquamarine;
+margin: 15px; 
+
+}
+
+
+    
 
 /* 
 ESTILOS ANTERIORES con Flexbox
@@ -193,6 +239,9 @@ h3{
   margin: 20px;
 }
  */
+
+
+
 
 /* CONTACT */
 

@@ -8,9 +8,10 @@
     <title>Dmc Portafolio</title>
   </head>
   <body>
-    <div class="grid-container-certificates">
+     
+    <div>
       <!-- comienza header  -->
-      <header class="header">
+      <header>
         <nav>
           <ul>
             <li><a href="../index.html">Home</a></li>
@@ -26,10 +27,10 @@
 
       <!-- comienza main section  -->
 
-    <main>
-        <!-- primer div con certificaciones -->
-        <div class="certification-block">
-          <article class="img-box">
+       <!-- aquí delcaro contenedor padre grid  -->
+    <main class="grid-container-certificates">
+        <!-- hijos de grid-container-certificates -->
+          <article class="img-box1">
             <img
               src="https://res.cloudinary.com/hdsqazxtw/image/upload/v1570710978/coderhouse.jpg"
               alt="freecodecampLogo"
@@ -37,7 +38,7 @@
               height="150px"
             />
           </article>
-          <article class="certification-info">
+          <article class="certification-info1">
             <h3>Desarrollo web</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
@@ -57,12 +58,12 @@
               corporis ad.
             </p>
           </article>
-        </div>
+    
 
-        <!-- segundo div con certificaciones -->
+        <!-- segundo grupo de certificaciones -->
 
-        <div class="certification-block">
-          <article class="img-box">
+        
+          <article class="img-box2">
             <img
               src="https://design-style-guide.freecodecamp.org/downloads/fcc_secondary_small.png"
               alt="freecodecampLogo"
@@ -70,7 +71,7 @@
             />
           </article>
 
-          <article class="certification-info">
+          <article class="certification-info2">
             <h3>Javascript</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
@@ -85,11 +86,11 @@
               commodi nam sapiente corporis possimus, dicta eos ipsa nisi.
             </p>
           </article>
-        </div>
-        <!-- tercer div con certificaciones -->
+       
+        <!-- tercer grupo de certificaciones -->
 
-        <div class="certification-block">
-          <article class="img-box">
+        
+          <article class="img-box3">
             <img
               src="https://res.cloudinary.com/hdsqazxtw/image/upload/v1570710978/coderhouse.jpg"
               alt="freecodecampLogo"
@@ -98,7 +99,7 @@
             />
           </article>
 
-          <article class="certification-info">
+          <article class="certification-info3">
             <h3>UI/UX</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
@@ -113,11 +114,11 @@
               commodi nam sapiente corporis possimus, dicta eos ipsa nisi.
             </p>
           </article>
-        </div>
+       
 
-        <!-- cuarto div con certificaciones -->
-        <div class="certification-block">
-          <article class="img-box">
+        <!-- cuarto grupo con certificaciones -->
+        
+          <article class="img-box4">
             <img
               src="https://design-style-guide.freecodecamp.org/downloads/fcc_secondary_small.png"
               alt="freecodecampLogo"
@@ -125,7 +126,7 @@
             />
           </article>
 
-          <article class="certification-info">
+          <article class="certification-info4">
             <h3>React</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
@@ -140,11 +141,10 @@
               commodi nam sapiente corporis possimus, dicta eos ipsa nisi.
             </p>
           </article>
-        </div>
     </main>
 
       <!-- Comienza footer  -->
-      <footer>
+      <footer class="certification-footer">
         <div class="logos">
           <img
             src="https://cdn.icon-icons.com/icons2/2428/PNG/512/linkedin_black_logo_icon_147114.png"
