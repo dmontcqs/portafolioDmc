@@ -146,18 +146,26 @@ grid-template-areas:
   "proyect-img3 proyect-info3"
   "proyect-img4 proyect-info4";
 }
+h3{
+  margin-top: 20px;
+}
+
 
 .proyect-img1{
   margin: 0 auto; 
   grid-area: proyect-img1; 
+ 
 }
+
 
 .proyect-info1{
   grid-area: proyect-info1;
-	background-image:linear-gradient(to left, whitesmoke, rgb(190, 179, 179) );
-  border-radius: 40px;
   margin: 50px; 
+  background-color: hsl(160, 100%, 75%);
+
 }
+
+/* title de los proyectos DESKTOP */
 
 
 .proyect-img2{
@@ -167,8 +175,7 @@ grid-template-areas:
 
 .proyect-info2{
   grid-area: proyect-info2;
-  background-color: aliceblue; 
-  border-radius: 40px;
+  background-color: aquamarine;
   margin: 50px;
 }
 
@@ -180,8 +187,7 @@ grid-template-areas:
 
 .proyect-info3{
   grid-area: proyect-info3;
-  background-color: aliceblue; 
-  border-radius: 40px;
+  background-color: aquamarine;
   margin: 50px;
 }
 
@@ -192,8 +198,7 @@ grid-template-areas:
 
 .proyect-info4{
   grid-area: proyect-info4;
-  background-color: aliceblue; 
-  border-radius: 40px;
+  background-color: aquamarine;
   margin: 50px;
 
 }
@@ -220,6 +225,7 @@ grid-template-areas:
 
 .certification-info1{
   margin: 0 auto;
+  background-color: aquamarine;
   grid-area: certification-info1;
   margin: 15px; 
 }
@@ -230,6 +236,7 @@ grid-template-areas:
 }
 
 .certification-info2{
+  background-color: aquamarine;
   margin: 0 auto;
   grid-area: certification-info2;
   margin: 15px; 
@@ -285,18 +292,6 @@ fieldset{
 
 /* DE 768pc para abajo */
 {
-  /*
-  .body{
-  display: grid;
-  grid-template-columns: 1fr ;
-  grid-template-rows: .2fr 4fr 1fr;
-  grid-template-areas: 
-  "header header header"
-  "section section section"
-  "footer footer footer"
-  }
-
-*/
   
   footer{
     margin-top: 5px;
@@ -371,6 +366,13 @@ fieldset{
   
   }
 
+
+/* sección contact mobile */
+
+.contact-footer{
+margin-top: 30px;
+}
+
 }
 
 
@@ -378,9 +380,10 @@ fieldset{
 
 /* 
 
-Si se quiere modificar un mismo elemento de distintas maneras según cada archivo html, (por ejemplo el body) solo debes de agragar clases al elemento html, (al body)
-y por cada clase añadida, hacer los estilos que queramos. Esto producirá distinots estilos de body en cada una de sus "instancias"
+Si se quiere modificar un mismo elemento de distintas maneras según cada archivo html, (por ejemplo el body) solo debes de agregar varias clases al elemento html, (al body por ejemplo)
+y por cada clase añadida, hacer los estilos que queramos. Esto producirá distinots estilos de body en cada una de sus "instancias".
 
+EJEMPLO: 
 index.html: 
 <body class= "bodyDelIndex">
 hijos
@@ -401,10 +404,7 @@ background-color: black
 background-color: white; 
 }
 
-esto modificará el estilo del body en cada una de sus instancias. 
-
-¿que pasa si están en un mismo archivo html las clases? se sobrreescribe el estilo de la utlima clase declarada en el html. 
+esto modificará el estilo del body en cada una de sus instancias.  
 */
 
 
-/* me quedé en v  */
