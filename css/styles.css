@@ -117,42 +117,88 @@ footer{
 
 
 
-/*SECCIÓN PROYECTS  DESKTOP **********************************************/
+/*SECCIÓN PROYECTS DESKTOP CON GRID */
 
-
-.proyect-block {
-  display: flex;
-  margin: 0 auto;
+main img{ 
+  margin: 50px;
+  width: 300px;
+  border-radius: 20px;
 }
 
-.img-box{
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  background-color: aliceblue;
-  margin: 20px;
-  align-items: center;
+p{
+  margin: 40px; 
 }
 
-img{
-  max-height: 200px;
-  min-width: 79px;
+h3{  
+text-align: center;
 }
 
 
-.proyect-info{
-  
-  justify-content: center;
-  width: 50%;
-  background-color: aliceblue;
-  margin: 20px
 
+.grid-proyect-block{
+display: grid; 
+grid-template-columns: 1fr 1fr; 
+grid-template-rows: (repeat, 4fr); 
+grid-template-areas: 
+
+  "proyect-img1 proyect-info1"
+  "proyect-img2 proyect-info2"
+  "proyect-img3 proyect-info3"
+  "proyect-img4 proyect-info4";
 }
 
-/* SECCIÓN CERTIFICATIONS DESKTOP */
+.proyect-img1{
+  margin: 0 auto; 
+  grid-area: proyect-img1; 
+}
+
+.proyect-info1{
+  grid-area: proyect-info1;
+	background-image:linear-gradient(to left, whitesmoke, rgb(190, 179, 179) );
+  border-radius: 40px;
+  margin: 50px; 
+}
 
 
-/* Prueba con Grid  */
+.proyect-img2{
+  margin: 0 auto; 
+  grid-area: proyect-img2; 
+}
+
+.proyect-info2{
+  grid-area: proyect-info2;
+  background-color: aliceblue; 
+  border-radius: 40px;
+  margin: 50px;
+}
+
+
+.proyect-img3{
+  margin: 0 auto; 
+  grid-area: proyect-img3; 
+}
+
+.proyect-info3{
+  grid-area: proyect-info3;
+  background-color: aliceblue; 
+  border-radius: 40px;
+  margin: 50px;
+}
+
+.proyect-img4{
+  margin: 0 auto; 
+  grid-area: proyect-img4; 
+}
+
+.proyect-info4{
+  grid-area: proyect-info4;
+  background-color: aliceblue; 
+  border-radius: 40px;
+  margin: 50px;
+
+}
+/* SECCIÓN CERTIFICATIONS DESKTOP CON GRID*/
+
 
 .grid-container-certificates{
   
@@ -166,8 +212,6 @@ img{
   "img-box3 certification-info3"
   "img-box4 certification-info4"
 }
-
-
 
 .img-box1{
   margin: 0 auto;
@@ -219,30 +263,6 @@ margin: 15px;
 }
 
 
-    
-
-/* 
-ESTILOS ANTERIORES con Flexbox
-.certification-block{
-  display: flex;
-  margin: 0 auto;
-}
-
-.certification-info{
-  
-  justify-content: center;
-  width: 50%;
-  background-color: aliceblue;
-  margin: 20px
-}
-h3{
-  margin: 20px;
-}
- */
-
-
-
-
 /* CONTACT */
 
 .form-section{
@@ -260,19 +280,12 @@ fieldset{
 
 
 
-
-
-
-
-
-
-
-
 /* MEDIA QUERIES  */
 @media screen and (max-width: 768px)
 
 /* DE 768pc para abajo */
 {
+  /*
   .body{
   display: grid;
   grid-template-columns: 1fr ;
@@ -283,6 +296,8 @@ fieldset{
   "footer footer footer"
   }
 
+*/
+  
   footer{
     margin-top: 5px;
   }
@@ -292,32 +307,73 @@ fieldset{
     font-size: 20px;
 }
 
+/* SECCIÓN PROYECTOS MOBILE*/
 
-/* SECCIÓN PROYECTS DE MEDIA QUERY */
-
-
-
-.proyect-block {
-  margin: 0 auto;
-  display: block; 
-}
-
-.img-box{
-margin: 0 auto;
+.proyects-heading{
+  text-align: center;
 }
 
 
-.proyect-info{
+.grid-proyect-block{
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: repeat(repeat, 8fr) ;
+  grid-template-areas:
+  "proyect-img1" 
+  "proyect-info1"
+  "proyect-img2" 
+  "proyect-info2"
+  "proyect-img3" 
+  "proyect-info3"
+  "proyect-img4" 
+  "proyect-info4";
+}
 
-  margin: 0 auto;
-  display: block;
-  justify-content: center;
-  background-color: yellow;
+.proyect-img1 img{
+  margin: 30px 30px;
+  border-radius: 20px;
+}
+
+
+.proyect-img2 img{
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.proyect-img3 img{
+  margin-top: 20px;
+  border-radius: 20px;
+}
+ 
+.proyect-img4 img{
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+
+/* SECCIÓN certificates MOBILE */
+
+
+.grid-container-certificates{
+  
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: repeat(repeat, 8fr) ;
+  grid-template-areas: 
+  "img-box1"
+  "certification-info1"
+  "img-box2" 
+  "certification-info2"
+  "img-box3" 
+  "certification-info3"
+  "img-box4" 
+  "certification-info4"
+  
+  }
 
 }
 
 
-}
 
 
 /* 
