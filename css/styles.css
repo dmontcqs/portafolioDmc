@@ -62,7 +62,8 @@ li {
 }
 
 li:hover {
-  background-color: bisque;
+  background-image:linear-gradient(to left, rgb(233, 187, 194), pink, whitesmoke);
+
 }
 
 a {
@@ -158,12 +159,19 @@ h3{
 }
 
 
+.proyect-img1:hover{
+  transform: scale(1.2, 1.2)
+}
+
 .proyect-info1{
   grid-area: proyect-info1;
   margin: 50px; 
   background-color: hsl(160, 100%, 75%);
+  border-radius: 10px;
 
 }
+
+
 
 /* title de los proyectos DESKTOP */
 
@@ -171,6 +179,11 @@ h3{
 .proyect-img2{
   margin: 0 auto; 
   grid-area: proyect-img2; 
+}
+
+
+.proyect-img2:hover{
+  transform: scale(1.2, 1.2)
 }
 
 .proyect-info2{
@@ -185,6 +198,11 @@ h3{
   grid-area: proyect-img3; 
 }
 
+
+.proyect-img3:hover{
+  transform: scale(1.2, 1.2)
+}
+
 .proyect-info3{
   grid-area: proyect-info3;
   background-color: aquamarine;
@@ -194,6 +212,11 @@ h3{
 .proyect-img4{
   margin: 0 auto; 
   grid-area: proyect-img4; 
+}
+
+
+.proyect-img4:hover{
+  transform: scale(1.2, 1.2)
 }
 
 .proyect-info4{
@@ -375,36 +398,5 @@ margin-top: 30px;
 
 }
 
-
-
-
-/* 
-
-Si se quiere modificar un mismo elemento de distintas maneras según cada archivo html, (por ejemplo el body) solo debes de agregar varias clases al elemento html, (al body por ejemplo)
-y por cada clase añadida, hacer los estilos que queramos. Esto producirá distinots estilos de body en cada una de sus "instancias".
-
-EJEMPLO: 
-index.html: 
-<body class= "bodyDelIndex">
-hijos
-</body>
-
-proyectos.html: 
-<body class= "bodyDeProyectos">
-hijos
-</body>
-
-y en CSS: 
-
-.bodyDelIndex{
-background-color: black
-}
-
-.bodyDeProyectos{
-background-color: white; 
-}
-
-esto modificará el estilo del body en cada una de sus instancias.  
-*/
 
 
